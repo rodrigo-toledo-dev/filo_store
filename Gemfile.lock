@@ -198,6 +198,10 @@ GEM
       rspec-mocks (~> 3.9)
       rspec-support (~> 3.9)
     rspec-support (3.9.2)
+    rswag (2.2.0)
+      rswag-api (= 2.2.0)
+      rswag-specs (= 2.2.0)
+      rswag-ui (= 2.2.0)
     rswag-api (2.2.0)
       railties (>= 3.1, < 6.1)
     rswag-specs (2.2.0)
@@ -282,9 +286,7 @@ DEPENDENCIES
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.2)
   rspec-rails
-  rswag-api
-  rswag-specs
-  rswag-ui
+  rswag
   sass-rails (>= 6)
   selenium-webdriver
   simplecov

@@ -1,0 +1,98 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "API V1",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/v1/employees": {
+      "post": {
+        "summary": "Creates a employee",
+        "tags": [
+          "Employees"
+        ],
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "employee",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name",
+                "email"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "employee created"
+          }
+        }
+      }
+    },
+    "/api/v1/employees/{id}": {
+      "get": {
+        "summary": "Retrieves a employee",
+        "tags": [
+          "Employees"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "type": "string",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "employee found",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "email",
+                "phone"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
