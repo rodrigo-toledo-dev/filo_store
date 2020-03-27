@@ -46,9 +46,6 @@ group :development do
 
   # ==== Custom gems
   gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
-  gem 'rswagger'
-  gem 'rswag-api'
-  gem 'rswag-ui'
 end
 
 group :test do
@@ -66,3 +63,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# ==== Custom gems
+gem 'rswag'
